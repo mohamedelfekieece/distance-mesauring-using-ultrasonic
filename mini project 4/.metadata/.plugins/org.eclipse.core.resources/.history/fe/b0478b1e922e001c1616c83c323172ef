@@ -1,0 +1,32 @@
+/*
+ * Main.c
+ *
+ *  Created on: Oct 15, 2021
+ *      Author: 20128
+ */
+
+#include"std_types.h"
+#include"lcd.h"
+#include"Ultrasonic.h"
+#include <avr/io.h> /* To use the SREG register */
+
+int main()
+{
+	uint16 distance
+	/* Enable Global Interrupt I-Bit */
+	SREG |= (1<<7);
+	LCD_init();
+
+	while(1)
+	{
+		Ultrasonic_init();
+		LCD_moveCursor(0,0);
+		LCD_displayString("THE DISTANCE =  ");
+		LCD_moveCursor(1,1);
+		Ultrasonic_readDistance()
+		LCD_intgerToString();
+		LCD_displayString(" CM");
+	}
+
+
+}

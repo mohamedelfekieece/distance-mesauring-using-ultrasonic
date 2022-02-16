@@ -1,0 +1,24 @@
+
+#ifndef ULTRASONIC_H_
+#define ULTRASONIC_H_
+
+#include"std_types.h"
+
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*Description
+ Initialize the ICU driver as required.
+ Setup the ICU call back function.
+ Setup the direction for the trigger pin as output pin through the
+ GPIO driver*/
+void Ultrasonic_init(void);
+
+void Ultrasonic_Trigger(void);
+
+uint16 Ultrasonic_readDistance(void);
+
+
+
+#endif /* ULTRASONIC_H_ */

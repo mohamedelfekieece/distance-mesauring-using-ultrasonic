@@ -1,0 +1,34 @@
+??:??:?? **** Incremental Build of configuration Debug for project mini_project_4 ****
+make all 
+Building file: ../Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Main.d" -MT"Main.o" -c -o "Main.o" "../Main.c"
+Finished building: ../Main.c
+ 
+Building target: mini_project_4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project_4.map -mmcu=atmega16 -o "mini_project_4.elf"  ./Main.o ./Ultrasonic.o ./gpio.o ./icu.o ./lcd.o   
+Finished building target: mini_project_4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project_4.elf  >"mini_project_4.lss"
+Finished building: mini_project_4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project_4.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9450 bytes (57.7% Full)
+(.text + .data + .bootloader)
+
+Data:        297 bytes (29.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+??:??:?? Build Finished. 0 errors, 0 warnings. (took 715ms)
+
